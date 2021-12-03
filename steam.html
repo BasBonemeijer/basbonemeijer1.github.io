@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Steam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#b8b7b7;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 65px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #773a3a;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: #854d4d;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.intro{
+    text-align: center;
+    padding-top: 5px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #773a3a;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.intro{
+    text-align: center;
+}
+
+.geenlijst{
+    padding-top:150px;
+}
+
+.bf{
+  background-image: url(https://sm.ign.com/ign_nl/news/v/valve-faci/valve-facing-new-lawsuit-over-steam-digital-dominance_mrw1.jpg);
+  background-position: center;
+  width: 600px;
+  border: 15px solid rgb(36, 29, 29);
+  padding: 170px;
+  margin:80px;
+  padding-left:900px;
+  background-size:cover;
+  
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a>
+  <button class="dropdown-btn">Platformen 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="epic.html">Epic games</a>
+    <a href="blizzard.html">Battle.net</a>
+    <a href="ubisoft.html">Ubisoft</a>
+    <a href="steam.html">Steam</a>
+  </div>
+  <a href="vergelijking.html">Vergelijking</a>
+  <a href="info.html">Info</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">Open</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+<script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+<div class="intro">
+    <h1>Steam</h1>
+    <p>Steam is een software-distributieplatform ontwikkeld door Valve Corporation, hoofdzakelijk bedoeld voor computerspellen. De eerste versie werd uitgebracht op 12 september 2003, met als oorspronkelijk doel het verspreiden van updates voor Counter-Strike te vereenvoudigen.[1][2] In 2018 had Steam 90 miljoen maandelijks actieve gebruikers en in januari 2019 verscheen het 30.000e spel op het platform.</p>
+</div>
+
+<div class="geenlijst">
+    <p>Op Steam staan dus heel veel spellen. Teveel om er een lijst van te maken</p>
+</div>
+
+
+<div class="bf">
+
+</div>
+
+
+</body>
+</html> 
